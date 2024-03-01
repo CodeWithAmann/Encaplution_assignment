@@ -1,0 +1,165 @@
+1 Ans :-  Encapsulation in OOP refers to the bundling of data and methods that operate on that data into a single unit or class. It hides the internal state of an object from the outside and only exposes the necessary functionality to interact with it. Encapsulation is important because it helps to achieve data hiding, which prevents the direct access of data from outside the class. This promotes better control over the data and reduces the risk of unintended manipulation, leading to more robust and maintainable code. Additionally, encapsulation enhances modularity by organizing related functionalities into coherent units, thereby improving code readability and reusability.
+
+2 Ans :-  The important features of Encapsulation in Object-Oriented Programming (OOP) include:
+
+Data Hiding: Encapsulation allows the hiding of the internal state (data) of an object from the outside world. This means that the internal representation of an object is hidden from the view outside the class definition.
+
+Access Control: It enables the control over the access to the members (attributes and methods) of a class. Access modifiers like public, private, and protected can be used to specify the level of access to class members, allowing for better security and encapsulation.
+
+Modularity: Encapsulation promotes modularity by bundling related data and methods into a single unit (class). This improves code organization, maintenance, and reusability by encapsulating the implementation details within the class.
+
+Flexibility and Maintainability: By encapsulating the implementation details, encapsulation allows for easier modification and enhancement of the class without affecting other parts of the code. This improves code maintainability and reduces the risk of unintended side effects when making changes.
+
+3 Ans :- Getter and setter methods, also known as accessor and mutator methods, are used in object-oriented programming (OOP) to access and modify the private attributes of a class, respectively. Here's an example in Java demonstrating their usage:
+
+java
+Copy code
+public class Person {
+    private String name;
+    private int age;
+
+    // Getter method for name attribute
+    public String getName() {
+        return name;
+    }
+
+    // Setter method for name attribute
+    public void setName(String newName) {
+        name = newName;
+    }
+
+    // Getter method for age attribute
+    public int getAge() {
+        return age;
+    }
+
+    // Setter method for age attribute
+    public void setAge(int newAge) {
+        if (newAge >= 0) {
+            age = newAge;
+        } else {
+            System.out.println("Age cannot be negative.");
+        }
+    }
+}
+In this example:
+
+getName() is a getter method that returns the value of the private attribute name.
+setName(String newName) is a setter method that takes a parameter newName and sets the value of the private attribute name to the provided value.
+getAge() is a getter method that returns the value of the private attribute age.
+setAge(int newAge) is a setter method that takes a parameter newAge and sets the value of the private attribute age to the provided value, but only if it's non-negative. Otherwise, it prints an error message.
+
+
+
+4 Ans :- The this keyword in object-oriented programming languages like Java is used to refer to the current instance of the class. It can be used in several contexts, but its primary use cases include:
+
+To Access Instance Variables: When there is a need to differentiate between instance variables and local variables or parameters with the same name, this can be used to refer to the instance variable.
+
+To Invoke Current Class Method: this can also be used to invoke current class methods, particularly when there is method hiding.
+
+Here's an example in Java:
+
+java
+Copy code
+public class MyClass {
+    private int value;
+
+    // Constructor
+    public MyClass(int value) {
+        this.value = value; // 'this' refers to the instance variable 'value'
+    }
+
+    // Method to set value
+    public void setValue(int value) {
+        this.value = value; // 'this' is used to refer to the instance variable 'value'
+    }
+
+    // Method to display value
+    public void displayValue() {
+        System.out.println("Value: " + this.value); // 'this' is optional here, but it makes it clear that 'value' is an instance variable
+    }
+
+    // Method to call another method
+    public void someMethod() {
+        this.displayValue(); // 'this' is used to invoke the current class method 'displayValue'
+    }
+}
+
+
+
+5 Ans :- The this keyword in object-oriented programming languages like Java is used to refer to the current instance of the class. It can be used in several contexts, but its primary use cases include:
+
+To Access Instance Variables: When there is a need to differentiate between instance variables and local variables or parameters with the same name, this can be used to refer to the instance variable.
+
+To Invoke Current Class Method: this can also be used to invoke current class methods, particularly when there is method hiding.
+
+Here's an example in Java:
+
+java
+Copy code
+public class MyClass {
+    private int value;
+
+    // Constructor
+    public MyClass(int value) {
+        this.value = value; // 'this' refers to the instance variable 'value'
+    }
+
+    // Method to set value
+    public void setValue(int value) {
+        this.value = value; // 'this' is used to refer to the instance variable 'value'
+    }
+
+    // Method to display value
+    public void displayValue() {
+        System.out.println("Value: " + this.value); // 'this' is optional here, but it makes it clear that 'value' is an instance variable
+    }
+
+    // Method to call another method
+    public void someMethod() {
+        this.displayValue(); // 'this' is used to invoke the current class method 'displayValue'
+    }
+}
+
+
+
+
+
+
+6 Ans :- To achieve encapsulation in Java, you can follow these steps:
+
+Declare the instance variables of the class as private to hide their internal state from outside access.
+Provide public getter and setter methods to allow controlled access to these private variables, ensuring that any access or modification is performed through these methods.
+Here's an example demonstrating encapsulation in Java:
+
+java
+Copy code
+public class Person {
+    // Private instance variables
+    private String name;
+    private int age;
+
+    // Getter method for name attribute
+    public String getName() {
+        return name;
+    }
+
+    // Setter method for name attribute
+    public void setName(String newName) {
+        name = newName;
+    }
+
+    // Getter method for age attribute
+    public int getAge() {
+        return age;
+    }
+
+    // Setter method for age attribute
+    public void setAge(int newAge) {
+        if (newAge >= 0) {
+            age = newAge;
+        } else {
+            System.out.println("Age cannot be negative.");
+        }
+    }
+}
